@@ -33,7 +33,7 @@ pipeline {
 // Stage 4
         stage('Launching the latest image') {
             steps {
-                sh 'docker run -d --name=Pihole -h pihole -e TZ=Asia/Kolkata -v /pihole/etc-pihole:/etc/pihole -v /pihole/etc-dnsmasq.d:/etc/dnsmasq.d --cap-add=NET_ADMIN pihole/pihole:latest'
+                sh 'docker run -d --name=Pihole -h pihole -e TZ=Asia/Kolkata --restart unless-stopped -v /pihole/etc-pihole:/etc/pihole -v /pihole/etc-dnsmasq.d:/etc/dnsmasq.d --cap-add=NET_ADMIN pihole/pihole:latest'
             }
         }
     }
