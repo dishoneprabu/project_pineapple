@@ -26,7 +26,7 @@ pipeline {
 
         stage('Launching the latest image') {
             steps {
-                sh 'docker run -d --name=Pihole-Primary -h pihole.j2dk.in --net=Home --ip 192.168.1.6 -e TZ=Asia/Kolkata -v /mnt/disk_01/docker/volume/pihole/etc-pihole:/etc/pihole -v /mnt/disk_01/docker/volume/pihole/etc-dnsmasq.d:/etc/dnsmasq.d --cap-add=NET_ADMIN --restart unless-stopped pihole/pihole:latest'
+                sh ' ur run command'
             }
         }
     }
